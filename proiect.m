@@ -53,51 +53,6 @@ writetable(A2);
 
 
 % inlocuirea valorilor extreme cu valorile anterioare
-A1.Age = filloutliers(A1.Age, 'previous' );
-A1.Total_Bilirubin = filloutliers(A1.Total_Bilirubin, 'previous' );
-A1.Direct_Bilirubin = filloutliers(A1.Direct_Bilirubin, 'previous' );
-A1.Alkaline_Phosphotase = filloutliers(A1.Alkaline_Phosphotase, 'previous' );
-A1.Alamine_Aminotransferase = filloutliers(A1.Alamine_Aminotransferase, 'previous' );
-A1.Aspartate_Aminotransferase = filloutliers(A1.Aspartate_Aminotransferase, 'previous' );
-A1.Total_Protiens = filloutliers(A1.Total_Protiens, 'previous' );
-A1.Albumin = filloutliers(A1.Albumin, 'previous' );
-A1.Albumin_and_Globulin_Ratio = filloutliers(A1.Albumin_and_Globulin_Ratio, 'previous' );
-
-% inlocuire valori lipsa cu valoarea mediana
-A1.Age= fillmissing(A1.Age,'movmedian',10); 
-A1.Total_Bilirubin= fillmissing(A1.Total_Bilirubin,'movmedian',10); 
-A1.Direct_Bilirubin= fillmissing(A1.Direct_Bilirubin,'movmedian',10); 
-A1.Alkaline_Phosphotase= fillmissing(A1.Alkaline_Phosphotase,'movmedian',10); 
-A1.Alamine_Aminotransferase= fillmissing(A1.Alamine_Aminotransferase,'movmedian',10); 
-A1.Aspartate_Aminotransferase= fillmissing(A1.Aspartate_Aminotransferase,'movmedian',10); 
-A1.Total_Protiens= fillmissing(A1.Total_Protiens,'movmedian',10); 
-A1.Albumin= fillmissing(A1.Albumin,'movmedian',10); 
-A1.Albumin_and_Globulin_Ratio= fillmissing(A1.Albumin_and_Globulin_Ratio,'movmedian',10); 
-
-% inlocuirea valorilor extreme cu valorile anterioare
-A2.Age = filloutliers(A2.Age, 'previous' );
-A2.Total_Bilirubin = filloutliers(A2.Total_Bilirubin, 'previous' );
-A2.Direct_Bilirubin = filloutliers(A2.Direct_Bilirubin, 'previous' );
-A2.Alkaline_Phosphotase = filloutliers(A2.Alkaline_Phosphotase, 'previous' );
-A2.Alamine_Aminotransferase = filloutliers(A2.Alamine_Aminotransferase, 'previous' );
-A2.Aspartate_Aminotransferase = filloutliers(A2.Aspartate_Aminotransferase, 'previous' );
-A2.Total_Protiens = filloutliers(A2.Total_Protiens, 'previous' );
-A2.Albumin = filloutliers(A2.Albumin, 'previous' );
-A2.Albumin_and_Globulin_Ratio = filloutliers(A2.Albumin_and_Globulin_Ratio, 'previous' );
-
-% inlocuire valori lipsa cu valoarea mediana
-A2.Age= fillmissing(A2.Age,'movmedian',10); 
-A2.Total_Bilirubin= fillmissing(A2.Total_Bilirubin,'movmedian',10); 
-A2.Direct_Bilirubin= fillmissing(A2.Direct_Bilirubin,'movmedian',10); 
-A2.Alkaline_Phosphotase= fillmissing(A2.Alkaline_Phosphotase,'movmedian',10); 
-A2.Alamine_Aminotransferase= fillmissing(A2.Alamine_Aminotransferase,'movmedian',10); 
-A2.Aspartate_Aminotransferase= fillmissing(A2.Aspartate_Aminotransferase,'movmedian',10); 
-A2.Total_Protiens= fillmissing(A2.Total_Protiens,'movmedian',10); 
-A2.Albumin= fillmissing(A2.Albumin,'movmedian',10); 
-A2.Albumin_and_Globulin_Ratio= fillmissing(A2.Albumin_and_Globulin_Ratio,'movmedian',10); 
-%}
-
-% inlocuirea valorilor extreme cu valorile anterioare
 A.Age = filloutliers(A.Age, 'previous' );
 A.Total_Bilirubin = filloutliers(A.Total_Bilirubin, 'previous' );
 A.Direct_Bilirubin = filloutliers(A.Direct_Bilirubin, 'previous' );
@@ -131,60 +86,6 @@ A2(deSters,:) = [];
 %numarul de valori lipsa dupa prelucrarea datelor
 TFA = nnz(ismissing(A))
 
-%%
-min11=min(T.Age)
-max11=max(T.Age)
-ave11=mean(T.Age)
-med11=median(T.Age)
-std11=std(T.Age)
-
-min12=min(A.Total_Bilirubin)
-max12=max(A.Total_Bilirubin)
-ave12=mean(A.Total_Bilirubin)
-med12=median(A.Total_Bilirubin)
-std12=std(A.Total_Bilirubin)
-
-min13=min(A.Direct_Bilirubin)
-max13=max(A.Direct_Bilirubin)
-ave13=mean(A.Direct_Bilirubin)
-med13=median(A.Direct_Bilirubin)
-std13=std(A.Direct_Bilirubin)
-
-min14=min(A.Alkaline_Phosphotase)
-max14=max(A.Alkaline_Phosphotase)
-ave14=mean(A.Alkaline_Phosphotase)
-med14=median(A.Alkaline_Phosphotase)
-std14=std(A.Alkaline_Phosphotase)
-
-min15=min(A.Alamine_Aminotransferase)
-max15=max(A.Alamine_Aminotransferase)
-ave15=mean(A.Alamine_Aminotransferase)
-med15=median(A.Alamine_Aminotransferase)
-std15=std(A.Alamine_Aminotransferase)
-
-min16=min(A.Aspartate_Aminotransferase)
-max16=max(A.Aspartate_Aminotransferase)
-ave16=mean(A.Aspartate_Aminotransferase)
-med16=median(A.Aspartate_Aminotransferase)
-std16=std(A.Aspartate_Aminotransferase)
-
-min17=min(A.Total_Protiens)
-max17=max(A.Total_Protiens)
-ave17=mean(A.Total_Protiens)
-med17=median(A.Total_Protiens)
-std17=std(A.Total_Protiens)
-
-min18=min(A.Albumin)
-max18=max(A.Albumin)
-ave18=mean(A.Albumin)
-med18=median(A.Albumin)
-std18=std(A.Albumin)
-
-min19=min(A.Albumin_and_Globulin_Ratio)
-max19=max(A.Albumin_and_Globulin_Ratio)
-ave19=mean(A.Albumin_and_Globulin_Ratio)
-med19=median(A.Albumin_and_Globulin_Ratio)
-std19=std(A.Albumin_and_Globulin_Ratio)
 
 %% Histograme si boxplot inainte de prelucrarea datelor
 % Histograme pentru pacientii fara afectiune hepatica 
@@ -228,7 +129,7 @@ title('Albumin and Globulin Ratio')
 
 % Boxplot pentru pacientii fara afectiune hepatica 
 figure(2)
-sgtitle('Histograme inainte de prelucrarea datelor (fara afectiune)') 
+sgtitle('Boxplot inainte de prelucrarea datelor (fara afectiune)') 
 subplot(3,3,1)
 boxplot(T1.Age)
 title('Varsta pacientilor')
@@ -306,7 +207,7 @@ title('Albumin and Globulin Ratio')
 
 % Boxplot pentru pacientii cu afectiune hepatica 
 figure(4)
-sgtitle('Histograme inainte de prelucrarea datelor (cu afectiune)') 
+sgtitle('Boxplot inainte de prelucrarea datelor (cu afectiune)') 
 subplot(3,3,1)
 boxplot(T2.Age)
 title('Varsta pacientilor')
@@ -385,7 +286,7 @@ title('Albumin and Globulin Ratio')
 
 % Boxplot dupa prelucrarea datelor pentru pacientii fara afectiune
 figure(6)
-sgtitle('Histograme dupa prelucrarea datelor (fara afectiune)') 
+sgtitle('Boxplot dupa prelucrarea datelor (fara afectiune)') 
 subplot(3,3,1)
 boxplot(A1.Age)
 title('Varsta pacientilor')
@@ -463,7 +364,7 @@ title('Albumin and Globulin Ratio')
 
 % Boxplot dupa prelucrarea datelor pentru pacientii cu afectiune
 figure(8)
-sgtitle('Histograme dupa prelucrarea datelor (cu afectiune)') 
+sgtitle('Boxplot dupa prelucrarea datelor (cu afectiune)') 
 subplot(3,3,1)
 boxplot(A2.Age)
 title('Varsta pacientilor')
@@ -500,21 +401,9 @@ subplot(3,3,9)
 boxplot(A2.Albumin_and_Globulin_Ratio)
 title('Albumin and Globulin Ratio')
 
-%{
-newNames=[A. Properties. VariableNames , 'Cu_afectiune'];
 
-for ii=1:size(A,1)
- if(A.Afectiune_hepatica(ii)>0)
-col_noua(ii)=1;
-else
- col_noua(ii)=0;
-end
-end
-AC=table(col_noua');
-A=[A AC];
 
-A. Properties. VariableNames = newNames ;
-%}
+
 
 %% Clasificatori pentru invatarea automata. Naïve Bayes
 procent_retinut=25;
