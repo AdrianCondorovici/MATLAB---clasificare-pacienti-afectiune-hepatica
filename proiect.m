@@ -42,7 +42,6 @@ A.Afectiune_hepatica(A.Afectiune_hepatica == 2)= 1 ;
 %%
 
 
-%{
 [r,c]=find(A.Afectiune_hepatica==0)
 A1=A(r,:);
 writetable(A1);
